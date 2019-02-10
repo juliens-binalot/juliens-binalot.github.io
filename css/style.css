@@ -176,7 +176,7 @@ body {
 }
 
 #navL:hover {
-  width: 55px;
+  transform: scale(1.2);
 }
 
 .mob-nav {
