@@ -205,4 +205,14 @@ body {
     position: absolute;
     bottom: 0;
   }
+
+  #hello {
+    animation: none;
+  }
+
+  #helloWorld{
+    text-align: center;
+    margin-left: 26%;
+    margin-right: 26%;
+  }
 }
