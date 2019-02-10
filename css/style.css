@@ -210,12 +210,16 @@ body {
   #hello {
     animation: none;
     filter: none;
+    position: absolute;
   }
   #helloWorld{
-    text-align: center;
-    margin-left: 40%;
-    margin-right: 40%;
-    width: 300px;
+    position:absolute;
     filter: blur(2px);
+    text-align: center;
+    top: 5%;
+    left: 81%;
+  }
+  header {
+    position: relative;
   }
 }
