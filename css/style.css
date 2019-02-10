@@ -183,21 +183,21 @@ body {
   visibility: hide;
 }
 
-@media screen and (min-height: 640px){
+@media screen and (max-width: 1024px){
   #navL, #navR {
     display: none;
     visibility: off;
   }
-  
+
   .mob-nav {
     padding: 5px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
-    font-size: 270%
+    font-size: 230%
   }
-  
+
   #mob-contact {
-    font-size: 200%;
+    font-size: 100%;
     padding: 5px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
