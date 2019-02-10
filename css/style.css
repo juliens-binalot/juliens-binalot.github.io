@@ -89,7 +89,7 @@ body {
 
 #navL {
   position: absolute;
-  width: 50px;
+  width: 70px;
   height: 160px;
   background-color: white;
   left: 0;
@@ -109,7 +109,7 @@ body {
 
 #navR {
   position: absolute;
-  width: 50px;
+  width: 70px;
   height: 160px;
   background-color: white;
   right: 0;
@@ -163,12 +163,12 @@ body {
 
 .links {
   position: absolute;
-  background-color: white;
   visibility: hide;
   display: none;
   margin: auto;
   height: 50%;
   padding: 20.95%;
+  font-size: 23px;
 }
 
 .links:hover {
