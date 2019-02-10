@@ -190,6 +190,7 @@ body {
   }
 
   .mob-nav {
+    display: inline;
     padding: 5px;
     font-family: 'Work Sans', sans-serif;
     font-weight: bold;
