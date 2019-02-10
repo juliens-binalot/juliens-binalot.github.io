@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Nunito|Rubik|Work+Sans|Cinzel');
+
+#scene {
+  display: relative;
+  /*justify-content: center;*/
+}
+.box {
+  display: block;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left {
+  background-color: #F8A475;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  transform: perspective(100vw) rotateY(36.7deg);
+  position: absolute;
+  left: 0;
+  z-index: 2;
+}
+
+.right {
+  background-color: #E28269;
+  width: 100%;
+  height: 100%;
+  transform-origin: right;
+  transform: perspective(100vw) rotateY(-36.7deg);
+  position: absolute;
+  right: 0;
+  z-index: 2;
+}
+
+body {
+  margin: 0;
+  background-color: #C85245;
+  overflow: hidden;
+}
+
+#project-container-cs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 80%;
+  height: 80%;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 5% 5%;
+  grid-area: proj;
+  justify-self: center;
+  padding: 5%;
+}
+
+.project-tile-cs {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  box-shadow: -5px 5px gray;
+}
+
+.img-cs {
+  width: 200px;
+  height: 200px;
+  z-index: 3;
+}
+
+.img-cs:hover {
+  transform: scale(1.5) perspective(100vw) rotateX(36.7deg);
+  width: auto;
+}
+
+#project-container-ar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: ;
+  margin: 5%;
+  width: 80%;
+  height: 80%;
+}
+
+.project-tile-ar {
+  width: auto;
+  height: 200px;
+  box-shadow: 5px 5px gray;
+  margin: 2%;
+}
+.project-tile-ar:hover {
+  transform: scale(1.5) perspective(100vw) rotateX(-36.7deg);
+  width: auto;
+}
+
+.cat-text {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-left: 5%;
+}
+
+#va-text {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  padding-left: 5%;
+}
+
+#navL {
+  background-color: white;
+  opacity: 0.7;
+  grid-area: navL;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  border-radius: 0 20px 20px 0px;
+  z-index: 3;
+  height: 30vh;
+  width: 4.7vh;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+#navR {
+  grid-area: navR;
+  background-color: white;
+  opacity: 0.7;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  text-align: right;
+  border-radius: 0px 20px 20px 0;
+  height: 30vh;
+  width: 4.7vh;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 3;
+  text-align: center;
+}
+
+.nav {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.nav:hover {
+  transform: scale(1.2);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  top: 100%
+  width: 100%;
+  opacity: 1;
+  transform: rotate(90deg);
+  text-align: end;
+  line-height: 1.6em;
+
+}
+
+#navR:hover {
+  opacity: 1;
+  width: 40vh;
+}
+
+.contact:hover {
+  transform: scale(1.5);
+}
+a:hover {
+  animation-name: text-color-change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes text-color-change{
+  0% {
+    color: border-color: hsl(43, 77%, 76%);;/*linear-gradient(90deg, red, yellow, rgb(204, 204, 255));*/
+  }
+  30% {
+    color: hsl(240, 100%, 65%);
+  }
+  60% {
+    color: hsl(22, 90%, 50%);
+  }
+}

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Nunito|Rubik|Work+Sans|Cinzel');
+
+header {
+  height: 30vh;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(#0d4fa7 0%, #3072cc 60%, #6facff 100%);
+  height: 100vh;
+}
+
+#hello {
+  grid-area: hello;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: url("#flyOn");
+  animation: wavemover 30s infinite alternate linear;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+#helloWorld {
+  color: #fff;
+  font-size: 6em;
+  max-width: 7ch;
+  opacity: .7;
+  margin-left: 20%;
+}
+
+@keyframes wavemover {
+  100% {
+    padding-left: 100vw;
+    transform: translateX(-50vw);
+  }
+}
+
+#scene {
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+  /*background-color: gray;*/
+  display: block;
+}
+
+#box {
+  display: block;
+  height: 100%;
+  width: 590px;
+  margin: auto;
+  /*background-color: white;*/
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  bottom: 0%;
+}
+
+#left {
+  position: absolute;
+  background-color: #EC94A0;
+  height: 50%;
+  width: 54.7%;
+  z-index: 2;
+  transform: perspective(1000px) rotateY(-45deg);
+  transform-origin: left;
+  left: 0%;
+  bottom: 16%;
+}
+
+#right {
+  position: absolute;
+  background-color: #FAAFB3;
+  height: 50%;
+  width: 54.7%;
+  z-index: 2;
+  transform: perspective(1000px) rotateY(45deg);
+  transform-origin: right;
+  right: 0%;
+  bottom: 16%;
+}
+
+#ground {
+  background-color: gray;
+  position: absolute;
+  height: 16%;
+  width: 100%;
+  bottom: 0%;
+}
+
+#navL {
+  position: absolute;
+  width: 50px;
+  height: 160px;
+  background-color: white;
+  left: 0;
+  top: 40%;
+  border-radius: 0 15px 15px 0;
+  opacity: 0.7;
+  z-index: 3;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+    color: #333;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#navR {
+  position: absolute;
+  width: 50px;
+  height: 160px;
+  background-color: white;
+  right: 0;
+  top: 40%;
+  border-radius: 15px 0 0 15px;
+  opacity: 0.7;
+  z-index: 3;
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+    color: #333;
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+  overflow: hide;
+}
+
+.nav-links-r {
+  transform: rotate(180deg);
+}
+
+#navR:hover .links{
+  visibility: visible;
+  display: block;
+  transform: rotate(-90deg);
+  position: relative;
+  left: 0;
+  top: 0.04%;
+  bottom: 0;
+}
+
+
+#navR:hover {
+  transform: translateX(-250%);
+}
+
+#intro {
+  position: absolute;
+  color: #fff;
+  font-size: 260%;
+  bottom: 0;
+}
+
+.box-text {
+    font-size: 150%;
+    font-family: 'Work Sans', sans-serif;
+  padding: 5px;
+}
+
+.links {
+  position: absolute;
+  background-color: white;
+  visibility: hide;
+  display: none;
+  margin: auto;
+  height: 50%;
+  padding: 20.95%;
+}
+
+.links:hover {
+  transform: scale(1.5);
+}
+
+#navL:hover {
+  width: 55px;
+}
+
+.mob-nav {
+  display: none;
+  visibility: hide;
+}
+
+@media screen and (min-height: 640px){
+  #navL, #navR {
+    display: none;
+    visibility: off;
+  }
+  
+  .mob-nav {
+    padding: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: 270%
+  }
+  
+  #mob-contact {
+    font-size: 200%;
+    padding: 5px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+  }
+}

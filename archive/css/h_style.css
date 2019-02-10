@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Nunito|Rubik|Work+Sans|Cinzel');
+
+header {
+  height: 50vh;
+}
+
+#hello {
+  grid-area: hello;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: url("#flyOn");
+  animation: wavemover 10s infinite alternate linear;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+#helloWorld {
+  color: #fff;
+  font-size: 6em;
+  max-width: 7ch;
+  opacity: .8;
+  margin-left: 20%;
+}
+
+#welcome-page {
+  display: grid;
+  grid-template-columns: 60px auto 60px;
+  grid-template-areas:
+    "navL box navR"
+    "grnd grnd grnd";
+  height: 50vh;
+  position: relative;
+}
+
+.box {
+  display: block;
+  position: relative;
+  justify-content: center;
+  align-items: end;
+  height: 50vh;
+  width: 45vw;
+  margin: auto;
+  grid-area: box;
+  padding: 20px 20px 0 20px;
+  vertical-align: text-bottom;
+}
+
+.right {
+  background-color: #EC94A0;
+  width: 90%;
+  height: 80%;
+  transform-origin: right;
+  transform: perspective(900px) rotateY(-45deg);
+  position: absolute;
+  right: 50%;
+  bottom: 7%;
+  z-index: 2;
+}
+
+.left {
+  background-color: #FAAFB3;
+  width: 90%;
+  height: 80%;
+  transform-origin: left;
+  transform: perspective(900px) rotateY(45deg);
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  z-index: 2;
+}
+#grnd {
+  background-color: gray;
+  height: 15vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  right: 0;
+  z-index: 1;
+  grid-area: grnd;
+  display: block;
+}
+
+@keyframes wavemover {
+  100% {
+    padding-left: 200px;
+    transform: translateX(-100px);
+  }
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(#0d4fa7 0%, #3072cc 60%, #6facff 100%);
+  position: relative;
+
+}
+
+.abt-txt {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  font-size: 10vh;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.abt-p {
+  font-size: 5vh;
+   font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+}
+
+#navL {
+  background-color: white;
+  opacity: 0.7;
+  grid-area: navL;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  border-radius: 0 20px 20px 0px;
+  z-index: 2;
+  height: 30vh;
+  width: 60%;
+}
+#navR {
+  grid-area: navR;
+  background-color: white;
+  opacity: 0.7;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  text-align: right;
+  border-radius: 0px 20px 20px 0;
+  height: 30vh;
+  width: 40vh;
+  z-index: 3;
+  text-align: center;
+  position: absolute;
+  left: 40%;
+}
+
+.nav {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.nav:hover {
+  transform: scale(1.2);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  bottom: 30%;
+  left: 25%;
+  width: 100%;
+  opacity: 1;
+  transform: rotate(90deg);
+  text-align: end;
+  line-height: 1.6em;
+}
+
+#navR:hover {
+  opacity: 1;
+  transform: translateX(-30vh) rotate(180deg);
+}
+
+.contact:hover {
+  transform: scale(1.5);
+}
+
+a:hover {
+  animation-name: text-color-change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes text-color-change{
+  0% {
+    color: border-color: hsl(43, 77%, 76%);;/*linear-gradient(90deg, red, yellow, rgb(204, 204, 255));*/
+  }
+  30% {
+    color: hsl(240, 100%, 65%);
+  }
+  60% {
+    color: hsl(22, 90%, 50%);
+  }
+}
