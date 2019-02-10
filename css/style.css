@@ -208,11 +208,13 @@ body {
 
   #hello {
     animation: none;
+    filter: none;
   }
-
   #helloWorld{
     text-align: center;
     margin-left: 26%;
     margin-right: 26%;
+    width: 300px;
+    filter: blur(2px);
   }
 }
